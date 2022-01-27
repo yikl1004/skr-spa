@@ -1,0 +1,57 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"parser": "babel-eslint",
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"airbnb",
+		"plugin:prettier/recommended",
+		"plugin:storybook/recommended",
+		"react-app",
+		"react-app/jest"
+	],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-hooks", "prettier"],
+	"rules": {
+		"react/no-unescaped-entities": "off",
+		"react/react-in-jsx-scope": 0,
+		"react/prefer-stateless-function": 0,
+		"react/jsx-filename-extension": 0,
+		"react/jsx-one-expression-per-line": 0,
+		"no-nested-ternary": 0,
+		// Indent with 4 spaces
+		"indent": ["error", 4],
+		// Indent JSX with 4 spaces
+		"react/jsx-indent": ["error", 4],
+		// Indent props with 4 spaces
+		"react/jsx-indent-props": ["error", 4]
+	},
+	"overrides": [
+		{
+			// or whatever matches stories specified in .storybook/main.js
+			"files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+			"rules": {
+				// example of overriding a rule
+				"storybook/hierarchy-separator": "error",
+				// example of disabling a rule
+				"storybook/default-exports": "off",
+				"import/no-anonymous-default-export": "off"
+			}
+		}
+	]
+}
