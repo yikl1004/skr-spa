@@ -28,13 +28,15 @@ export default function Counter() {
 		<Content>
 			<Button
 				aria-label="Decrement value"
-				onClick={() => dispatch(decrement())}>
+				onClick={() => dispatch(decrement())}
+			>
 				-
 			</Button>
 			<span>{count}</span>
 			<Button
 				aria-label="Increment value"
-				onClick={() => dispatch(increment())}>
+				onClick={() => dispatch(increment())}
+			>
 				+
 			</Button>
 			<Input
@@ -43,15 +45,16 @@ export default function Counter() {
 				onChange={onChangeAmount}
 			/>
 			<Button
-				onClick={() => dispatch(incrementByAmount(incrementAmount))}>
+				onClick={() => dispatch(incrementByAmount(incrementAmount))}
+			>
 				Add Amount
 			</Button>
-			<Button onClick={() => dispatch(incrementAsync(incrementAmount))}>
+			{/* <Button onClick={() => dispatch(incrementAsync(incrementAmount))}>
 				Add Async
 			</Button>
 			<Button onClick={() => dispatch(incrementIfOdd(incrementAmount))}>
 				Add If Odd
-			</Button>
+			</Button> */}
 		</Content>
 	)
 }

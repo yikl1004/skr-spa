@@ -1,11 +1,6 @@
-import { NextPage } from 'next'
-import dynamic from 'next/dynamic'
+import GridCommonFeature from '@components/Grid'
 
-const GridCommonFeature = dynamic(() => import('@components/Grid'), {
-	ssr: false,
-})
-
-const GridPage: NextPage = () => {
+const GridPage: React.FC = () => {
 	return <GridCommonFeature />
 }
 

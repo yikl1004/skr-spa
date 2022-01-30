@@ -6,6 +6,8 @@ import { persistor, store } from '@store/index'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+import 'antd/dist/antd.min.css'
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>

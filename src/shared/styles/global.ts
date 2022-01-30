@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html,
@@ -17,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
     * {
     box-sizing: border-box;
     }
-    ${require("antd/dist/antd.css")}
 
     .site-layout-content {
         min-height: 280px;
@@ -30,6 +29,6 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 20px;
         background-color: #fff;
     }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

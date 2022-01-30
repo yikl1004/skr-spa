@@ -1,10 +1,10 @@
-import Link from 'next/link'
 import { Menu } from 'antd'
 import {
 	AppstoreOutlined,
 	MailOutlined,
 	SettingOutlined,
 } from '@ant-design/icons'
+import { Anchor } from '@components/common'
 import type { MenuClickEventHandler } from 'rc-menu/lib/interface'
 
 const { SubMenu, ItemGroup, Item } = Menu
@@ -22,23 +22,24 @@ export const Sidebar: React.FC<Props> = (props) => {
 			style={{ width: 256 }}
 			defaultSelectedKeys={['1']}
 			defaultOpenKeys={['sub1']}
-			mode="inline">
+			mode="inline"
+		>
 			<SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
 				<ItemGroup key="g1" title="Examples">
 					<Item key="1">
-						<Link href="/example/counter">Counter</Link>
+						<Anchor to="/example/counter">Counter</Anchor>
 					</Item>
 					<Item key="2">
-						<Link href="/example/forms">Forms</Link>
+						<Anchor to="/example/forms">Forms</Anchor>
 					</Item>
 					<Item key="3">
-						<Link href="/example/login">Login</Link>
+						<Anchor to="/example/login">Login</Anchor>
 					</Item>
 					<Item key="4">
-						<Link href="/example/grid">Grid</Link>
+						<Anchor to="/example/grid">Grid</Anchor>
 					</Item>
 					<Item key="5">
-						<Link href="/example/portal">Portal</Link>
+						<Anchor to="/example/portal">Portal</Anchor>
 					</Item>
 				</ItemGroup>
 				<ItemGroup key="g2" title="Item 2">
@@ -49,7 +50,8 @@ export const Sidebar: React.FC<Props> = (props) => {
 			<SubMenu
 				key="sub2"
 				icon={<AppstoreOutlined />}
-				title="Navigation Two">
+				title="Navigation Two"
+			>
 				<Item key="sub2-1">Option 5</Item>
 				<Item key="sub2-2">Option 6</Item>
 				<SubMenu key="sub3" title="Submenu">
@@ -60,7 +62,8 @@ export const Sidebar: React.FC<Props> = (props) => {
 			<SubMenu
 				key="sub4"
 				icon={<SettingOutlined />}
-				title="Navigation Three">
+				title="Navigation Three"
+			>
 				<Item key="sub4-1">Option 9</Item>
 				<Item key="sub4-2">Option 10</Item>
 				<Item key="sub4-3">Option 11</Item>

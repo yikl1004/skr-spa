@@ -4,11 +4,12 @@
 		"es6": true,
 		"node": true
 	},
-	"parser": "babel-eslint",
+	"parser": "@typescript-eslint/parser",
 	"extends": [
+		// "airbnb",
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"airbnb",
+		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
 		"plugin:storybook/recommended",
 		"react-app",
@@ -17,6 +18,11 @@
 	"settings": {
 		"react": {
 			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
 		}
 	},
 	"parserOptions": {
@@ -26,20 +32,21 @@
 		"ecmaVersion": 2018,
 		"sourceType": "module"
 	},
-	"plugins": ["react", "react-hooks", "prettier"],
+	"plugins": [
+		"react",
+		"react-hooks",
+		"@typescript-eslint",
+		"prettier",
+		"storybook"
+	],
 	"rules": {
+		"prettier/prettier": "error",
 		"react/no-unescaped-entities": "off",
 		"react/react-in-jsx-scope": 0,
 		"react/prefer-stateless-function": 0,
 		"react/jsx-filename-extension": 0,
 		"react/jsx-one-expression-per-line": 0,
-		"no-nested-ternary": 0,
-		// Indent with 4 spaces
-		"indent": ["error", 4],
-		// Indent JSX with 4 spaces
-		"react/jsx-indent": ["error", 4],
-		// Indent props with 4 spaces
-		"react/jsx-indent-props": ["error", 4]
+		"no-nested-ternary": 0
 	},
 	"overrides": [
 		{
