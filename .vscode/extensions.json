@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"igorming.useful-react-snippets",
+		"dsznajder.es7-react-js-snippets",
+		"esbenp.prettier-vscode",
+		"christian-kohler.path-intellisense",
+		"silvenon.mdx",
+		"davidanson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
+		"mikestead.dotenv"
+	]
+}
