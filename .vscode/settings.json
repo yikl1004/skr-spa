@@ -1,1 +1,75 @@
-{}
+{
+	// 설정을 이 파일에 넣어서 기본 설정을 덮어씁니다.
+	"editor.fontSize": 14,
+	"editor.fontFamily": "SourceCodePro",
+	"editor.fontLigatures": true,
+	"editor.tabSize": 4,
+	// Set the default
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		// For ESLint
+		"source.fixAll.eslint": true
+	},
+	"editor.linkedEditing": true,
+	"editor.suggestSelection": "first",
+
+	// 파일과 폴더를 제외하기 위한 GLOB 패턴을 구성합니다.
+	"files.exclude": {
+		".*": false,
+		"**/.DS_Store": true,
+		"**/.git": false,
+		"**/.idea": true,
+		"**/.svn": true,
+		"**/.yarn": true,
+		"**/node_modules": true
+	},
+
+	"html.suggest.html5": true,
+
+	// 검색에서 파일 및 폴더를 제외하도록 GLOB 패턴을 구성합니다. files.exclude 설정에서 모든 GLOB 패턴을 상속합니다.
+	"search.exclude": {
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.yarn": true,
+		"**/*.xcodeproj": true,
+		"**/*.xcworkspace": true,
+		"**/bower_components": true,
+		"**/build": true,
+		"**/coverage": true,
+		"**/node_modules": true,
+		"**/Pods": true,
+		"**/tmp": true
+	},
+
+	"files.watcherExclude": {
+		"**/node_modules/**": false,
+		"**/node_modules/*/**": true
+	},
+	"javascript.format.enable": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"typescript.locale": "ko",
+	"typescript.preferences.quoteStyle": "single",
+
+	// Enable per-language
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[typescriptreact]": {},
+	"[typescript]": {},
+
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+	// eslint
+	"eslint.options": {
+		"parserOptions": {
+			"ecmaVersion": 6,
+			"sourceType": "module"
+		}
+	},
+	"eslint.lintTask.enable": true,
+	"eslint.run": "onSave",
+	"eslint.alwaysShowStatus": true
+}
